@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1</title>
+    <script>
+    
+        function add(obj){
+            var parent = obj.parentElement;
+            if(obj != parent.lastElementChild)
+            return;
+            var newP = document.createElement("p");
+            newP.onclick = function(){
+                parent.removeChild(this);
+            }
+            newP.innerHTML = "<img src='media/leo.png'>";
+            parent.appendChild(newP);
+        }
+    </script>
+</head>
+<body>
+ <h3>이미지를 동적으로 삽입</h3>
+ <hr>
+ <div>
+ <p id = "p" onclick="add(this)">여기를 누르면 이미지가 나타납니다.</p>
+</div>
+</body>
+</html>

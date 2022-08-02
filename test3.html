@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test3</title>
+</head>
+<body>
+    <h3> 선택한 버튼으로 배경색 지정하기
+    </h3>
+    <hr>
+    <div>
+       <button onmouseover="a(this)" onmouseout="c(this)">보라색 버튼</button>
+       <button onmouseover="b(this)" onmouseout="d(this)">초록색 버튼</button>
+    </div>
+    <script>
+        var a = new Date();
+        function a(obj){
+            obj.style.backgroundColor="violet";
+        }
+        function b(obj){
+            obj.style.backgroundColor="green";
+        }
+        function c(obj){
+            body.style.backgroundColor="violet";
+        }
+        function d(obj){
+            body.style.backgroundColor="green";
+        }
+       
+        document.body.style.backgroundColor="lightgray";
+        document.write("현제 시간:" + a.getHours() +"시,");
+        document.write( a.getMinutes() +"분,");
+        document.write( a.getSeconds() +"초,");
+    </script>
+</body>
+</html>

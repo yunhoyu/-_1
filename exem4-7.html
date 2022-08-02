@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         var div = document.getElementById("img");
+         div.onmouseover = over;
+         div.onmouseout = out;
+         function over() {
+             div.innerHTML = "<img src= 'media/T back.png'>";
+         }
+         function out() {
+             div.innerHTML = "<img src= 'media/T front.png'>";
+         }
+    </script>
+</head>
+<body>
+    <h3>자바스크립트로 바꿔보자  @</h3>
+    <hr>
+    <tr>
+        <td>마우스를 올리면 카드의 앞면이 보인다.</td>
+        <td>
+            <div id="img" width= 100px height= 140px></div>
+        </td>
+    </tr>
+</body>
+</html>

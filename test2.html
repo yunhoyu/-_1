@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test2</title>
+    <style>
+        div { position: absolute;}
+        img { position: absolute;}
+    </style>
+</head>
+<body>
+    <h3> z-index 스타일 프로퍼터 </h3>
+    <hr>
+    <div>
+        <img src = "media/spade-A.png" width="100" height="140" art="스페이드 A">
+        <img src = "media/spade-2.png" width="100" height="140" art="스페이드 A">
+        <img src = "media/spade-3.png" width="100" height="140" art="스페이드 A">
+        <img src = "media/spade-7.png" width="100" height="140" art="스페이드 A">
+    </div>
+    <script>
+        var n=20;
+        var imgArray = document.getElementsByTagName("img");
+        for(i=0; i<imgArray.length; i++){
+            var obj=imgArray[i];
+            obj.style.zIndex= i;
+            obj.style.left= "(n+=10)px";
+            obj.style.top= "(n+=20)px";
+            obj.onclick = shuffle;
+        }
+        function shuffle(){
+            for(i=0; i<imgArray.length; i++){
+                var obj=imgArray[i];
+                obj.style.zIndex++;
+                obj.style.zIndex %= imgArray.length;
+            }
+        }
+    </script>
+</body>
+</html>
